@@ -15,6 +15,7 @@ class ViewController: UITableViewController {
         
         tableView.backgroundColor = .red
         setupNavigationItems()
+        view.backgroundColor = .blue
 
     }
     
