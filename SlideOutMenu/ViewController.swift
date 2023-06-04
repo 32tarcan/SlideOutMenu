@@ -12,13 +12,33 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.backgroundColor = .red
         setupNavigationItems()
 
     }
     
     @objc func handleOpen() {
-       print("Opening menu...")
+        print("Opening menu...")
+        
+        let vc = MenuController()
+//vc.view.backgroundColor = .blue
+        
+        
+        vc.view.frame = CGRect(x: 0, y: 0, width: 300, height: self.view.frame.height)
+
+        let mainWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        mainWindow?.addSubview(vc.view)
+        
+        
+       
+//view.addSubview(vc.view)
+        
+        
+//        let blueView = UIView()
+//        blueView.backgroundColor = .blue
+//        blueView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+//        view.addSubview(blueView)
        
         
     }
